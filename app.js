@@ -60,8 +60,8 @@ rl.on('line', (input) => {
     };
   }
   else {
-    if (input == 'idioci') {
-      top10idiots();
+    if (input == 'top10') {
+      top10();
     }
     else if (input == 'cześć') {
       console.log('Witaj towarzyszu');
@@ -72,7 +72,7 @@ rl.on('line', (input) => {
     else if (input == 'co?') {
       console.log('Ale co?');
     }
-    else if (input == 'kod mariusz') {
+    else if (input == 'PANIC') {
       console.log('INFO: Wszystko co napiszesz zostanie zapisane!\nAby wyjść wpisz /close\n');
     }
     else if (input == 'json') {
@@ -98,8 +98,8 @@ rl.on('line', (input) => {
 });
 
 //functions
-function top10idiots() {
-  console.log('\nList of top 10 idiots');
+function top10() {
+  console.log('\nList of top 10');
   fs.readFile('dane.txt', 'utf8', (err, data) => {
     if (err) throw err;
     console.log(`${ data }\n`);
